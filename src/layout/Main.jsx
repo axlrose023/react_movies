@@ -17,7 +17,7 @@ class Main extends React.Component {
 
     fetchMovies = (searchTerm, type = "all") => {
         fetch(
-            `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}${type !== "all" ? `&type=${type}` : ""}`
+            `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}${type !== "all" ? `&type=${type}` : ""}`
         )
             .then((response) => response.json())
             .then((data) => {
